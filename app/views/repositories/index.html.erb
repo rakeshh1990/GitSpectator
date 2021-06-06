@@ -1,0 +1,7 @@
+<div class='user-repos'>
+  <% @user_repos.each do |repo| %>
+    <div>
+      <%= link_to repo['name'], user_repository_path(id: repo['name']) %>
+    </div>
+  <% end %>
+</div>

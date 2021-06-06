@@ -1,0 +1,15 @@
+<% if @current_user %>
+  <div class='header'>
+    <div>Hello, <%= @current_user['login'] %>!</div>
+    <div>
+      <%= form_with url: "/logout", method: :post do |form| %>
+        <%= form.submit "Logout" %>
+      <% end %>
+    </div>
+  </div>
+  <div class='menu'>
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'Repositories', user_repositories_path(user_id: @current_user['login']) %>
+    <%= link_to 'Projects', user_projects_path(user_id: @current_user['login']) %>
+  </div>
+<% end %>
