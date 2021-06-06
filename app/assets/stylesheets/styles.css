@@ -4,3 +4,34 @@
   justify-content: flex-end;
   flex-wrap: wrap;
 }
+
+.header > div {
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.menu {
+  display: flex;
+  background-color: lightcyan;
+}
+
+.menu  > a {
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.user-repos, .user-projects {
+  flex-direction: column;
+}
+
+.user-repos  > div {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.repo-chart {
+  justify-content: space-around;
+}

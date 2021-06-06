@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   get '/authorize', to: 'login#github_authorize'
   get '/github/callback', to: 'login#github_callback'
   post '/logout', to: 'login#logout'
+
+  resources :users, only: %i[index] do
+    resources :repositories, only: %i[index show]
+    resources :projects, only: %i[index show]
+  end
 end
