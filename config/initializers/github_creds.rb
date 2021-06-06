@@ -1,2 +1,2 @@
-ENV['GH_BASIC_CLIENT_ID'] = 'c87cdb40c8a221e558d1'
-ENV['GH_BASIC_SECRET_ID'] = 'b456fdadc923959c06c61fde68ba886fa8c97be3'
+ENV['GH_BASIC_CLIENT_ID'] = 'xxxxxxxxxxxxxxxxxxxx'
+ENV['GH_BASIC_SECRET_ID'] = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
