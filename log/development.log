@@ -1,0 +1,2587 @@
+  [1m[35m (272.1ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+  [1m[35m (127.9ms)[0m  [1m[35mCREATE DATABASE "multischema_development" ENCODING = 'unicode'[0m
+  [1m[35m (112.1ms)[0m  [1m[35mCREATE DATABASE "multischema_test" ENCODING = 'unicode'[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE DATABASE "multischema_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "multischema_test" ENCODING = 'unicode'[0m
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(962873915067646470)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBananaSchema (20210605051224)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE SCHEMA "banana"[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210605051224"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to Banana (20210605051449)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(962873915067646470)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(962873915067646470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Banana (20210605051449)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "banana"."banana" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210605051449"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-05 05:19:19.732377"], ["updated_at", "2021-06-05 05:19:19.732377"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(962873915067646470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(962873915067646470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Apple (20210605052046)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "apple" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210605052046"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(962873915067646470)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(962873915067646470)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Apple (20210605052046)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(962873915067646470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(962873915067646470)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Apple (20210605052046)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(962873915067646470)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(962873915067646470)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Apple (20210605052046)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "apple"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210605052046"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(962873915067646470)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(962873915067646470)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Banana (20210605051449)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "banana"."banana"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210605051449"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(962873915067646470)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(962873915067646470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Banana (20210605051449)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "banana"."bananas" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210605051449"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to Apple (20210605052046)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "apples" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210605052046"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(962873915067646470)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mApple Load (0.4ms)[0m  [1m[34mSELECT "apples".* FROM "apples" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE SCHEMA "banana"[0m
+  [1m[36mBanana Load (1.1ms)[0m  [1m[34mSELECT "banana"."bananas".* FROM "banana"."bananas" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2021-06-05 17:34:05 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.0/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.0/gems/railties-6.0.3.7/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.5ms | Allocations: 477)
+Completed 200 OK in 20ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 2717)
+
+
+Started GET "/" for ::1 at 2021-06-05 17:43:30 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 358.3ms | Allocations: 144786)
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 0.0ms | Allocations: 145906)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `client_id' for #<#<Class:0x00007f786442c410>:0x00007f7864436b40>
+Did you mean?  @client_id):
+     7:     </p>
+     8:     <p>
+     9:       We're going to now talk to the GitHub API. Ready?
+    10:       <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= client_id %>">Click here</a> to begin!</a>
+    11:     </p>
+    12:     <p>
+    13:       If that link doesn't work, remember to provide your own <a href="/apps/building-oauth-apps/authorizing-oauth-apps/">Client ID</a>!
+  
+app/views/login/index.html.erb:10
+Started GET "/" for ::1 at 2021-06-05 17:43:49 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 123)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/rakesh.h@idexcel.internal/rakesh/GitSpectator/public/packs
+[Webpacker] (node:10878) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+(node:10878) ExperimentalWarning: Package name self resolution is an experimental feature. This feature could change at any time
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: f86639f4459f31b34f60
+Version: webpack 4.46.0
+Time: 1418ms
+Built at: 05/06/2021 5:43:51 pm
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-07e792d2b65403c647a1.js    124 KiB  application  [emitted] [immutable]  application
+js/application-07e792d2b65403c647a1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-07e792d2b65403c647a1.js js/application-07e792d2b65403c647a1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 2511ms (Views: 2508.7ms | ActiveRecord: 0.0ms | Allocations: 14571)
+
+
+Started GET "/" for ::1 at 2021-06-05 17:44:07 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 3237)
+
+
+Started GET "/" for ::1 at 2021-06-05 17:44:24 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 246)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 6698)
+
+
+Started GET "/github/callback?code=95668f884560a3563940" for ::1 at 2021-06-05 17:45:01 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/github/callback"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/github/callback?code=95668f884560a3563940" for ::1 at 2021-06-05 17:51:49 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"95668f884560a3563940"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2080)
+
+
+  
+NameError (uninitialized constant LoginController::RestClient):
+  
+app/controllers/login_controller.rb:10:in `github_callback'
+Started GET "/github/callback?code=95668f884560a3563940" for ::1 at 2021-06-05 17:52:24 +0530
+  
+LoadError (cannot load such file -- rest-client):
+  
+app/controllers/login_controller.rb:1:in `<main>'
+Started GET "/github/callback?code=95668f884560a3563940" for ::1 at 2021-06-05 17:53:28 +0530
+  
+LoadError (cannot load such file -- rest-client):
+  
+app/controllers/login_controller.rb:3:in `<class:LoginController>'
+app/controllers/login_controller.rb:2:in `<main>'
+Started GET "/github/callback?code=95668f884560a3563940" for ::1 at 2021-06-05 17:56:21 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"95668f884560a3563940"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2180)
+
+
+  
+NameError (uninitialized constant LoginController::CLIENT_ID):
+  
+app/controllers/login_controller.rb:15:in `github_callback'
+Started GET "/github/callback?code=95668f884560a3563940" for ::1 at 2021-06-05 17:57:15 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"95668f884560a3563940"}
+Completed 500 Internal Server Error in 644ms (ActiveRecord: 0.0ms | Allocations: 4687)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/login_controller.rb:22:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 17:57:30 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 128)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 5920)
+
+
+Started GET "/github/callback?code=8a5e0ed1942e05fed42c" for ::1 at 2021-06-05 17:57:32 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"8a5e0ed1942e05fed42c"}
+Completed 500 Internal Server Error in 1422ms (ActiveRecord: 0.0ms | Allocations: 3756)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:28:in `github_callback'
+Started GET "/github/callback?code=8a5e0ed1942e05fed42c" for ::1 at 2021-06-05 17:58:17 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"8a5e0ed1942e05fed42c"}
+Completed 500 Internal Server Error in 578ms (ActiveRecord: 0.0ms | Allocations: 2525)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/login_controller.rb:22:in `github_callback'
+Started GET "/github/callback?code=8a5e0ed1942e05fed42c" for ::1 at 2021-06-05 17:58:36 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"8a5e0ed1942e05fed42c"}
+Completed 500 Internal Server Error in 570ms (ActiveRecord: 0.0ms | Allocations: 2542)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/login_controller.rb:22:in `github_callback'
+Started GET "/github/callback?code=8a5e0ed1942e05fed42c" for ::1 at 2021-06-05 17:59:25 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"8a5e0ed1942e05fed42c"}
+Completed 500 Internal Server Error in 908ms (ActiveRecord: 0.0ms | Allocations: 2543)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/login_controller.rb:24:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 17:59:51 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 3380)
+
+
+Started GET "/github/callback?code=dd613f3676f59d62dd18" for ::1 at 2021-06-05 17:59:54 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"dd613f3676f59d62dd18"}
+Completed 500 Internal Server Error in 1114ms (ActiveRecord: 0.0ms | Allocations: 3763)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:00:38 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3351)
+
+
+Started GET "/github/callback?code=8a80e8b7704c035b816f" for ::1 at 2021-06-05 18:00:46 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"8a80e8b7704c035b816f"}
+Completed 500 Internal Server Error in 1213ms (ActiveRecord: 0.0ms | Allocations: 3760)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:01:48 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3344)
+
+
+Started GET "/github/callback?code=5816d4e3990440f310f0" for ::1 at 2021-06-05 18:01:51 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"5816d4e3990440f310f0"}
+Completed 500 Internal Server Error in 603ms (ActiveRecord: 0.0ms | Allocations: 2604)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/login_controller.rb:25:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:03:16 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 3343)
+
+
+Started GET "/github/callback?code=ff8fed5afb3c20ecf27a" for ::1 at 2021-06-05 18:03:18 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"ff8fed5afb3c20ecf27a"}
+Completed 500 Internal Server Error in 811ms (ActiveRecord: 0.0ms | Allocations: 2592)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/login_controller.rb:25:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:04:47 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 3344)
+
+
+Started GET "/apps/building-oauth-apps/authorizing-oauth-apps/" for ::1 at 2021-06-05 18:04:49 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/apps/building-oauth-apps/authorizing-oauth-apps"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-06-05 18:04:59 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 3237)
+
+
+Started GET "/github/callback?code=0907bc1c5e43ecd35d72" for ::1 at 2021-06-05 18:05:01 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"0907bc1c5e43ecd35d72"}
+Completed 500 Internal Server Error in 1624ms (ActiveRecord: 0.0ms | Allocations: 3762)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:06:38 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 3351)
+
+
+Started GET "/github/callback?code=12c2163ff7f976cc3e2d" for ::1 at 2021-06-05 18:06:40 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"12c2163ff7f976cc3e2d"}
+Completed 500 Internal Server Error in 1317ms (ActiveRecord: 0.0ms | Allocations: 3749)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:07:24 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 3339)
+
+
+Started GET "/github/callback?code=6ee76e8bf643ba2d3409" for ::1 at 2021-06-05 18:07:26 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"6ee76e8bf643ba2d3409"}
+Completed 500 Internal Server Error in 1215ms (ActiveRecord: 0.0ms | Allocations: 3748)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:09:31 +0530
+  
+SyntaxError (/home/rakesh.h@idexcel.internal/rakesh/GitSpectator/app/controllers/login_controller.rb:27: syntax error, unexpected tSTRING_BEG, expecting end
+...email_scope = scopes.include? 'user:email'
+...                              ^):
+  
+app/controllers/login_controller.rb:27: syntax error, unexpected tSTRING_BEG, expecting end
+app/controllers/login_controller.rb:27: syntax error, unexpected tSTRING_BEG, expecting end
+app/controllers/login_controller.rb:27: syntax error, unexpected tSTRING_BEG, expecting end
+Started GET "/" for ::1 at 2021-06-05 18:09:53 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 3342)
+
+
+Started GET "/github/callback?code=717f305f0cbd74cee8ca" for ::1 at 2021-06-05 18:09:55 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"717f305f0cbd74cee8ca"}
+Completed 500 Internal Server Error in 1216ms (ActiveRecord: 0.0ms | Allocations: 3752)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:16:17 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3353)
+
+
+Started GET "/github/callback?code=665402b98dd4cacb330d" for ::1 at 2021-06-05 18:16:24 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"665402b98dd4cacb330d"}
+Completed 500 Internal Server Error in 685ms (ActiveRecord: 0.0ms | Allocations: 99501)
+
+
+  
+NameError (undefined local variable or method `auth_result' for #<LoginController:0x000055a7490b8d58>):
+  
+app/controllers/login_controller.rb:38:in `github_callback'
+Started GET "/github/callback?code=665402b98dd4cacb330d" for ::1 at 2021-06-05 18:17:08 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"665402b98dd4cacb330d"}
+Completed 500 Internal Server Error in 718ms (ActiveRecord: 0.0ms | Allocations: 2522)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/login_controller.rb:24:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:17:14 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3384)
+
+
+Started GET "/" for ::1 at 2021-06-05 18:17:17 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 3227)
+
+
+Started GET "/github/callback?code=4d9fb97cd62433953873" for ::1 at 2021-06-05 18:17:20 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"4d9fb97cd62433953873"}
+Completed 500 Internal Server Error in 1343ms (ActiveRecord: 0.0ms | Allocations: 3737)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:40:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:17:56 +0530
+  
+SyntaxError (/home/rakesh.h@idexcel.internal/rakesh/GitSpectator/app/controllers/login_controller.rb:41: syntax error, unexpected ',', expecting =>
+...{ access_token: access_token }, accept: :json }
+...                              ^):
+  
+app/controllers/login_controller.rb:41: syntax error, unexpected ',', expecting =>
+app/controllers/login_controller.rb:41: syntax error, unexpected ',', expecting =>
+app/controllers/login_controller.rb:41: syntax error, unexpected ',', expecting =>
+Started GET "/" for ::1 at 2021-06-05 18:18:11 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 3345)
+
+
+Started GET "/github/callback?code=809cd42b1fcadf670c38" for ::1 at 2021-06-05 18:18:13 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"809cd42b1fcadf670c38"}
+Completed 500 Internal Server Error in 1124ms (ActiveRecord: 0.0ms | Allocations: 3765)
+
+
+  
+RestClient::Unauthorized (401 Unauthorized):
+  
+app/controllers/login_controller.rb:40:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:23:31 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 3344)
+
+
+Started GET "/" for ::1 at 2021-06-05 18:23:44 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 117)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 4265)
+
+
+Started GET "/github/callback?code=f418e32aa3d169fa227d" for ::1 at 2021-06-05 18:23:45 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"f418e32aa3d169fa227d"}
+Completed 500 Internal Server Error in 1213ms (ActiveRecord: 0.0ms | Allocations: 3739)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:25:52 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 3341)
+
+
+Started GET "/github/callback?code=601834a89c5c091788f2" for ::1 at 2021-06-05 18:25:54 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"601834a89c5c091788f2"}
+Completed 500 Internal Server Error in 1750ms (ActiveRecord: 0.0ms | Allocations: 3720)
+
+
+  
+RestClient::Unauthorized (401 Unauthorized):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:27:16 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3344)
+
+
+Started GET "/github/callback?code=f80f27b47a38953b4df1" for ::1 at 2021-06-05 18:27:19 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"f80f27b47a38953b4df1"}
+Completed 500 Internal Server Error in 1317ms (ActiveRecord: 0.0ms | Allocations: 3757)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:28:38 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 3343)
+
+
+Started GET "/github/callback?code=9f230033788dd0e246e0" for ::1 at 2021-06-05 18:28:41 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"9f230033788dd0e246e0"}
+Completed 500 Internal Server Error in 1422ms (ActiveRecord: 0.0ms | Allocations: 3728)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:33:59 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 3345)
+
+
+Started GET "/github/callback?code=0c4eacde9919b9848057" for ::1 at 2021-06-05 18:34:02 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"0c4eacde9919b9848057"}
+Completed 500 Internal Server Error in 1026ms (ActiveRecord: 0.0ms | Allocations: 3741)
+
+
+  
+RestClient::Unauthorized (401 Unauthorized):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:34:27 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3339)
+
+
+Started GET "/github/callback?code=9a48ec07c4240b146964" for ::1 at 2021-06-05 18:34:29 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"9a48ec07c4240b146964"}
+Completed 500 Internal Server Error in 1240ms (ActiveRecord: 0.0ms | Allocations: 3729)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:40:08 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3345)
+
+
+Started GET "/github/callback?code=b59c1a3834b430eb2804" for ::1 at 2021-06-05 18:40:14 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"b59c1a3834b430eb2804"}
+Completed 500 Internal Server Error in 1176ms (ActiveRecord: 0.0ms | Allocations: 3749)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:43:11 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3348)
+
+
+Started GET "/github/callback?code=c7f5c9ee4150d8d51eb5" for ::1 at 2021-06-05 18:43:13 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"c7f5c9ee4150d8d51eb5"}
+Completed 500 Internal Server Error in 1147ms (ActiveRecord: 0.0ms | Allocations: 3755)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:43:48 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 3347)
+
+
+Started GET "/github/callback?code=9eead58f02376bb9c26b" for ::1 at 2021-06-05 18:43:50 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"9eead58f02376bb9c26b"}
+Completed 500 Internal Server Error in 782ms (ActiveRecord: 0.0ms | Allocations: 2853)
+
+
+  
+NoMethodError (undefined method `new' for RestClient:Module):
+  
+app/controllers/login_controller.rb:30:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:44:17 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 3343)
+
+
+Started GET "/github/callback?code=b61e70690f600072467c" for ::1 at 2021-06-05 18:44:19 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"b61e70690f600072467c"}
+Completed 500 Internal Server Error in 2341ms (ActiveRecord: 0.0ms | Allocations: 3694)
+
+
+  
+RestClient::Unauthorized (401 Unauthorized):
+  
+app/controllers/login_controller.rb:34:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:51:15 +0530
+  
+SyntaxError (/home/rakesh.h@idexcel.internal/rakesh/GitSpectator/app/controllers/login_controller.rb:32: syntax error, unexpected tSYMBEG, expecting '}'
+...                              :accept => :json}
+...                              ^):
+  
+app/controllers/login_controller.rb:32: syntax error, unexpected tSYMBEG, expecting '}'
+app/controllers/login_controller.rb:32: syntax error, unexpected tSYMBEG, expecting '}'
+app/controllers/login_controller.rb:32: syntax error, unexpected tSYMBEG, expecting '}'
+Started GET "/" for ::1 at 2021-06-05 18:51:23 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 3343)
+
+
+Started GET "/github/callback?code=7c923a820f2393f82136" for ::1 at 2021-06-05 18:51:24 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"7c923a820f2393f82136"}
+Completed 500 Internal Server Error in 1420ms (ActiveRecord: 0.0ms | Allocations: 3692)
+
+
+  
+RestClient::Unauthorized (401 Unauthorized):
+  
+app/controllers/login_controller.rb:34:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:51:42 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 3344)
+
+
+Started GET "/github/callback?code=6fe805ccc6ee1b8f5e93" for ::1 at 2021-06-05 18:51:44 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"6fe805ccc6ee1b8f5e93"}
+Completed 500 Internal Server Error in 848ms (ActiveRecord: 0.0ms | Allocations: 3688)
+
+
+  
+RestClient::Unauthorized (401 Unauthorized):
+  
+app/controllers/login_controller.rb:34:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:52:46 +0530
+  
+SyntaxError (/home/rakesh.h@idexcel.internal/rakesh/GitSpectator/app/controllers/login_controller.rb:32: syntax error, unexpected '}', expecting =>
+...             :accept => :json}}
+...                              ^):
+  
+app/controllers/login_controller.rb:32: syntax error, unexpected '}', expecting =>
+app/controllers/login_controller.rb:32: syntax error, unexpected '}', expecting =>
+app/controllers/login_controller.rb:32: syntax error, unexpected '}', expecting =>
+Started GET "/" for ::1 at 2021-06-05 18:53:37 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 3341)
+
+
+Started GET "/github/callback?code=5ba24443f9d8efa021f9" for ::1 at 2021-06-05 18:53:39 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"5ba24443f9d8efa021f9"}
+Completed 500 Internal Server Error in 1625ms (ActiveRecord: 0.0ms | Allocations: 3713)
+
+
+  
+RestClient::Unauthorized (401 Unauthorized):
+  
+app/controllers/login_controller.rb:34:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:54:13 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 3346)
+
+
+Started GET "/github/callback?code=d1c3b829e280b6b8f2fa" for ::1 at 2021-06-05 18:54:16 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"d1c3b829e280b6b8f2fa"}
+Completed 500 Internal Server Error in 1419ms (ActiveRecord: 0.0ms | Allocations: 3710)
+
+
+  
+RestClient::Unauthorized (401 Unauthorized):
+  
+app/controllers/login_controller.rb:34:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 18:56:18 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 3345)
+
+
+Started GET "/github/callback?code=0c94e26076e8e4058c70" for ::1 at 2021-06-05 18:56:20 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"0c94e26076e8e4058c70"}
+Completed 500 Internal Server Error in 1193ms (ActiveRecord: 0.0ms | Allocations: 3692)
+
+
+  
+RestClient::Unauthorized (401 Unauthorized):
+  
+app/controllers/login_controller.rb:34:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 19:13:43 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 3344)
+
+
+Started GET "/github/callback?code=94862205d3c935c76939" for ::1 at 2021-06-05 19:13:46 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"94862205d3c935c76939"}
+Completed 500 Internal Server Error in 989ms (ActiveRecord: 0.0ms | Allocations: 3696)
+
+
+  
+RestClient::Unauthorized (401 Unauthorized):
+  
+app/controllers/login_controller.rb:34:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 19:14:48 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 3342)
+
+
+Started GET "/github/callback?code=992c51ecc4cf6c51ef6b" for ::1 at 2021-06-05 19:14:50 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"992c51ecc4cf6c51ef6b"}
+Completed 500 Internal Server Error in 1345ms (ActiveRecord: 0.0ms | Allocations: 3696)
+
+
+  
+RestClient::Unauthorized (401 Unauthorized):
+  
+app/controllers/login_controller.rb:35:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 19:19:29 +0530
+  
+SyntaxError (/home/rakesh.h@idexcel.internal/rakesh/GitSpectator/app/controllers/login_controller.rb:32: syntax error, unexpected tSTRING_DEND, expecting ')'
+...: auth_token, :accept => :json})
+...                              ^
+/home/rakesh.h@idexcel.internal/rakesh/GitSpectator/app/controllers/login_controller.rb:39: syntax error, unexpected tSTRING_DEND, expecting '}'
+...access_token }, accept: :json }
+...                              ^):
+  
+app/controllers/login_controller.rb:32: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/controllers/login_controller.rb:39: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/controllers/login_controller.rb:32: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/controllers/login_controller.rb:39: syntax error, unexpected tSTRING_DEND, expecting '}'
+app/controllers/login_controller.rb:32: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/controllers/login_controller.rb:39: syntax error, unexpected tSTRING_DEND, expecting '}'
+Started GET "/" for ::1 at 2021-06-05 19:20:23 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 3344)
+
+
+Started GET "/github/callback?code=e5e5aebdd4e65f6ed090" for ::1 at 2021-06-05 19:20:25 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"e5e5aebdd4e65f6ed090"}
+Completed 500 Internal Server Error in 1119ms (ActiveRecord: 0.0ms | Allocations: 5052)
+
+
+  
+NoMethodError (undefined method `get' for <RestClient::Response 200 "{\"login\":\"r...">:RestClient::Response
+Did you mean?  gem):
+  
+app/controllers/login_controller.rb:35:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 19:20:51 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 3342)
+
+
+Started GET "/github/callback?code=d4a4d664d7ebc36c239f" for ::1 at 2021-06-05 19:20:53 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"d4a4d664d7ebc36c239f"}
+Completed 500 Internal Server Error in 1831ms (ActiveRecord: 0.0ms | Allocations: 5732)
+
+
+  
+RestClient::BadRequest (400 Bad Request):
+  
+app/controllers/login_controller.rb:40:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 19:21:21 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 3341)
+
+
+Started GET "/github/callback?code=3bfef898379fde1aa95c" for ::1 at 2021-06-05 19:21:24 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"3bfef898379fde1aa95c"}
+  Rendering login/github_callback.html.erb within layouts/application
+  Rendered login/github_callback.html.erb within layouts/application (Duration: 288.5ms | Allocations: 147126)
+Completed 500 Internal Server Error in 2528ms (ActiveRecord: 0.0ms | Allocations: 153156)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `auth_result' for #<#<Class:0x00007ff6fd3571f8>:0x00007ff6f17d10c8>):
+     5: 
+     6:   </head>
+     7:   <body>
+     8:     <p>Hello, <%= auth_result['login'] %>!</p>
+     9:     <p>
+    10:       <% if !auth_result['email'].nil? && !auth_result['email'].empty? %> It looks like your public email address is <%= email %>.
+    11:       <% else %> It looks like you don't have a public email. That's cool.
+  
+app/views/login/github_callback.html.erb:8
+Started GET "/github/callback?code=3bfef898379fde1aa95c" for ::1 at 2021-06-05 19:22:17 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"3bfef898379fde1aa95c"}
+Completed 500 Internal Server Error in 513ms (ActiveRecord: 0.0ms | Allocations: 2531)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/login_controller.rb:24:in `github_callback'
+Started GET "/" for ::1 at 2021-06-05 19:22:47 +0530
+Processing by LoginController#index as HTML
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 4264)
+
+
+Started GET "/github/callback?code=477774345d3113a1d4e9" for ::1 at 2021-06-05 19:22:49 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"477774345d3113a1d4e9"}
+  Rendering login/github_callback.html.erb within layouts/application
+  Rendered login/github_callback.html.erb within layouts/application (Duration: 1.6ms | Allocations: 281)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1847ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 9056)
+
+
+Started GET "/github/callback?code=477774345d3113a1d4e9" for ::1 at 2021-06-05 19:25:15 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"477774345d3113a1d4e9"}
+Completed 500 Internal Server Error in 778ms (ActiveRecord: 0.0ms | Allocations: 2569)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/login_controller.rb:24:in `github_callback'
+Started GET "/github/callback?code=477774345d3113a1d4e9" for ::1 at 2021-06-05 19:25:26 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"477774345d3113a1d4e9"}
+Completed 500 Internal Server Error in 588ms (ActiveRecord: 0.0ms | Allocations: 2569)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/login_controller.rb:24:in `github_callback'
+Started GET "/" for ::1 at 2021-06-06 08:52:02 +0530
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 0.0ms | Allocations: 97908)
+
+
+  
+NameError (undefined local variable or method `aithorize_path' for #<UsersController:0x00007ff6f06669c8>
+Did you mean?  authorize_path):
+  
+app/controllers/application_controller.rb:7:in `authorize'
+Started GET "/" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 290)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:18 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 290)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:19 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 290)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:24 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:52:54 +0530
+Processing by LoginController#github_authorize as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:53:05 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.2ms | Allocations: 123)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 4277)
+
+
+Started GET "/github/callback?code=4f4b85ed793de3b79be7" for ::1 at 2021-06-06 08:53:08 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"4f4b85ed793de3b79be7"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 544ms (ActiveRecord: 0.0ms | Allocations: 1980)
+
+
+Started GET "/" for ::1 at 2021-06-06 08:53:09 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 353)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 08:53:09 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3240)
+
+
+Started GET "/github/callback?code=fffe5d3482bebe9ebb6d" for ::1 at 2021-06-06 08:53:46 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"fffe5d3482bebe9ebb6d"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 628ms (ActiveRecord: 0.0ms | Allocations: 1996)
+
+
+Started GET "/" for ::1 at 2021-06-06 08:53:47 +0530
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1106ms (ActiveRecord: 0.0ms | Allocations: 99826)
+
+
+  
+NameError (undefined local variable or method `has_user_email_scope' for #<UsersController:0x00007ff6f06f2810>):
+  
+app/controllers/users_controller.rb:17:in `index'
+Started GET "/" for ::1 at 2021-06-06 08:55:49 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 277.3ms | Allocations: 147798)
+Completed 500 Internal Server Error in 1796ms (ActiveRecord: 0.0ms | Allocations: 152654)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `private_emails' for #<#<Class:0x00007ff6f0780228>:0x00007ff6f078db80>
+Did you mean?  private_methods):
+    14:     <p>
+    15:       <% if @auth_result['private_emails'] %>
+    16:       With your permission, we were also able to dig up your private email addresses:
+    17:       <%= private_emails.map{ |private_email_address| private_email_address["email"] }.join(', ') %>
+    18:       <% else %>
+    19:       Also, you're a bit secretive about your private email addresses.
+    20:       <% end %>
+  
+app/views/users/index.html.erb:17
+Started GET "/" for ::1 at 2021-06-06 08:56:42 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1959ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 8239)
+
+
+Started GET "/" for ::1 at 2021-06-06 10:14:48 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2783ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 8231)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-06 10:49:39 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+Started GET "/authorize" for 127.0.0.1 at 2021-06-06 10:49:39 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.4ms | Allocations: 114)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3837)
+
+
+Started GET "/github/callback?code=d0d6812228e60dffdd2a" for 127.0.0.1 at 2021-06-06 10:49:51 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"d0d6812228e60dffdd2a"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 752ms (ActiveRecord: 0.0ms | Allocations: 1961)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-06 10:49:51 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1226ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 7030)
+
+
+Started GET "/" for ::1 at 2021-06-06 10:56:51 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 352)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1168ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 8304)
+
+
+Started POST "/logout" for ::1 at 2021-06-06 10:56:55 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/logout"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/logout" for ::1 at 2021-06-06 10:56:59 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/logout"):
+  
+actionpack (6.0.3.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.7) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.3.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/logout" for ::1 at 2021-06-06 10:57:37 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"b1QvK2zK2tJMgZUnQsmsdML6xeEkXF4jzVdq1m6Vme4J+acsx8fjI47LqEcEaPzbixFEQvmgunYw29HF9vOk2Q==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 438)
+
+
+Started GET "/" for ::1 at 2021-06-06 10:57:37 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 351)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 10:57:37 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.3ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 3914)
+
+
+Started GET "/github/callback?code=26efdddbee85086b79be" for ::1 at 2021-06-06 10:59:35 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"26efdddbee85086b79be"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 804ms (ActiveRecord: 0.0ms | Allocations: 1956)
+
+
+Started GET "/" for ::1 at 2021-06-06 10:59:35 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1639ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 7324)
+
+
+Started POST "/logout" for ::1 at 2021-06-06 11:12:52 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"2Vz5GNCFOozAE4kU1pHx2h0MczyTO1eZiOWLNwW9phC/8XEfe4gDfQJZtHSQMKF1VOfyn07Hs8x1aTAkndubJw==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 433)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:12:52 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 346)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 11:12:52 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 3391)
+
+
+Started GET "/github/callback?code=170b1f39bac071075d9f" for ::1 at 2021-06-06 11:12:55 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"170b1f39bac071075d9f"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 1010ms (ActiveRecord: 0.0ms | Allocations: 1959)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:12:56 +0530
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2146)
+
+
+  
+NameError (uninitialized constant UsersController::GithubApi):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/" for ::1 at 2021-06-06 11:13:11 +0530
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1476)
+
+
+  
+NameError (undefined local variable or method `session' for #<GithubApi:0x00007f033d11bbf0>):
+  
+app/services/GithubApi.rb:3:in `initialize'
+app/controllers/users_controller.rb:8:in `new'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/" for ::1 at 2021-06-06 11:17:13 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 365)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1498ms (Views: 30.0ms | ActiveRecord: 0.0ms | Allocations: 10988)
+
+
+Started POST "/logout" for ::1 at 2021-06-06 11:17:24 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"IuJ3U8PgeiW0IETJVnMbKSYr4ThAePr6j+9p9b42RHdET/9UaO1D1HZqeakQ0kuGb8Bgm52EHq9yY9LmJlB5QA==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 464)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:17:24 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 11:17:24 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.4ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 3928)
+
+
+Started GET "/github/callback?code=3d759dd21c4ac23b5a0d" for ::1 at 2021-06-06 11:17:27 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"3d759dd21c4ac23b5a0d"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 1011ms (ActiveRecord: 0.0ms | Allocations: 1999)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:17:28 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1430ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 7216)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:18:24 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1390ms (Views: 21.4ms | ActiveRecord: 0.0ms | Allocations: 8282)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:19:28 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 338)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1193ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 8283)
+
+
+Started POST "/logout" for ::1 at 2021-06-06 11:22:44 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"b7QpjH5HPzti8qs+UH7NNZtHgCffQ54ZhfcqoXJU/AEJGaGL1UoGyqC4ll4W352a0qwBhAK/ekx4e5Gy6jLBNg==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 437)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:22:44 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 341)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 11:22:44 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.3ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 3921)
+
+
+Started GET "/github/callback?code=412d92a8cbb7c9fb24a2" for ::1 at 2021-06-06 11:22:47 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"412d92a8cbb7c9fb24a2"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 851ms (ActiveRecord: 0.0ms | Allocations: 1955)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:22:47 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 610ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 5621)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:25:13 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 727ms (Views: 47.8ms | ActiveRecord: 0.0ms | Allocations: 8795)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:27:05 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 730ms (Views: 41.0ms | ActiveRecord: 0.0ms | Allocations: 12099)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:27:41 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 652ms (Views: 40.4ms | ActiveRecord: 0.0ms | Allocations: 12226)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:30:07 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 931ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 12465)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:32:10 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 341)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1264ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 6560)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:32:27 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1257ms (Views: 37.5ms | ActiveRecord: 0.0ms | Allocations: 12962)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:40:59 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 370)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 944ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 6628)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:49:10 +0530
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 677ms (ActiveRecord: 0.0ms | Allocations: 3382)
+
+
+  
+NameError (undefined local variable or method `response' for #<GithubApi:0x00005557363e4f80>
+Did you mean?  respond_to?):
+  
+app/services/GithubApi.rb:8:in `initialize'
+app/controllers/users_controller.rb:7:in `new'
+app/controllers/users_controller.rb:7:in `index'
+Started GET "/" for ::1 at 2021-06-06 11:49:50 +0530
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 786ms (ActiveRecord: 0.0ms | Allocations: 100200)
+
+
+  
+NameError (undefined local variable or method `get_repos' for #<UsersController:0x00007f033d23b4b8>):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/" for ::1 at 2021-06-06 11:50:05 +0530
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1931ms (ActiveRecord: 0.0ms | Allocations: 6249)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/services/GithubApi.rb:17:in `get_repos'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/" for ::1 at 2021-06-06 11:50:21 +0530
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1735ms (ActiveRecord: 0.0ms | Allocations: 7245)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/services/GithubApi.rb:17:in `get_repos'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/" for ::1 at 2021-06-06 11:51:06 +0530
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1933ms (ActiveRecord: 0.0ms | Allocations: 6212)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/services/GithubApi.rb:17:in `get_repos'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/" for ::1 at 2021-06-06 11:53:22 +0530
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 2122ms (ActiveRecord: 0.0ms | Allocations: 6332)
+
+
+  
+RestClient::NotFound (404 Not Found):
+  
+app/services/GithubApi.rb:18:in `get_repos'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/" for ::1 at 2021-06-06 11:53:52 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 411)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2212ms (Views: 42.6ms | ActiveRecord: 0.0ms | Allocations: 16717)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:56:11 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 405)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2459ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 11030)
+
+
+Started GET "/" for ::1 at 2021-06-06 11:56:44 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2510ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 10078)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-06 12:44:16 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2202ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 9243)
+
+
+Started GET "/" for ::1 at 2021-06-06 12:48:31 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 408)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1995ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 10755)
+
+
+Started POST "/logout" for ::1 at 2021-06-06 12:48:37 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"vu5CaSN+ZwLB0u3S/dnqt7gTrt7WH8ZP0S7edaRjDbrYQ8puiHNe8wOY0LK7eLoY8fgvfQvjIhosomVmPAUwjQ==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 471)
+
+
+Started GET "/" for ::1 at 2021-06-06 12:48:37 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 12:48:37 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.3ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 4018)
+
+
+Started GET "/github/callback?code=fb00fa79debdd583ff6f" for ::1 at 2021-06-06 12:49:46 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"fb00fa79debdd583ff6f"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 565ms (ActiveRecord: 0.0ms | Allocations: 1962)
+
+
+Started GET "/" for ::1 at 2021-06-06 12:49:47 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 160)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1891ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 9417)
+
+
+Started POST "/logout" for ::1 at 2021-06-06 12:49:53 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"oaBuXHyhVsEH6Scmk6Pg00GIE5TleRxLTK7Ofnb6XLnHDeZb16xvMMWjGkbVArB8CGOSNziF+B6xInVt7pxhjg==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 387)
+
+
+Started GET "/" for ::1 at 2021-06-06 12:49:53 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 12:49:53 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 3331)
+
+
+Started GET "/github/callback?code=794e0cdabc858dcce1e1" for ::1 at 2021-06-06 12:49:57 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"794e0cdabc858dcce1e1"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 829ms (ActiveRecord: 0.0ms | Allocations: 1964)
+
+
+Started GET "/" for ::1 at 2021-06-06 12:49:58 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2037ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 9414)
+
+
+Started POST "/logout" for ::1 at 2021-06-06 12:56:41 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"P9EQfI/AqxNH753/yQ2FE/WQVF3o9EKo+egfSmcKH5lZfJh7JM2S4oWloJ+PrNW8vHvV/jUIpv0EZKRZ/2wirg==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 386)
+
+
+Started GET "/" for ::1 at 2021-06-06 12:56:41 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 12:56:41 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.7ms | Allocations: 114)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 4350)
+
+
+Started GET "/github/callback?code=4511ddcf7525faeb05e3" for ::1 at 2021-06-06 12:56:51 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"4511ddcf7525faeb05e3"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 702ms (ActiveRecord: 0.0ms | Allocations: 1966)
+
+
+Started GET "/" for ::1 at 2021-06-06 12:56:51 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 407)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1703ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 10266)
+
+
+Started GET "/" for ::1 at 2021-06-06 12:58:09 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 160)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13606ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 9690)
+
+
+Started POST "/logout" for 127.0.0.1 at 2021-06-06 12:58:36 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"a53Ok6hw/48Qw+8W9TDIjYrkrAePclpGGu42fw95BOdrWzXD6chOJqk8CUJ22TxrlRBcel+NUgzJXBUkj16zzg==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 431)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-06 12:58:36 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 290)
+
+
+Started GET "/authorize" for 127.0.0.1 at 2021-06-06 12:58:36 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 3487)
+
+
+Started POST "/logout" for ::1 at 2021-06-06 12:59:10 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"YkurxYpmxn8HXGArSDdvADWxbcfz714hfyzvhmZkclIE5iPCIWv/jsUWXUsOlj+vfFrsZC4TunSCoFSV/gJPZQ==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 380)
+
+
+Started GET "/" for ::1 at 2021-06-06 12:59:10 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 12:59:10 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 3336)
+
+
+Started GET "/github/callback?code=52a9f0a86524e020f1ef" for ::1 at 2021-06-06 12:59:38 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"52a9f0a86524e020f1ef"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 8012ms (ActiveRecord: 0.0ms | Allocations: 1984)
+
+
+Started GET "/" for ::1 at 2021-06-06 12:59:46 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13716ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 9471)
+
+
+Started POST "/logout" for ::1 at 2021-06-06 13:00:58 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"jbyViY+CirdP1Ig5aRyQAgM/2WtFzTiWujdWsouDKTPrER2OJI+zRo2etVkvvcCtStRYyJgx3MNHu+2hE+UUBA==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 385)
+
+
+Started GET "/" for ::1 at 2021-06-06 13:00:58 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 293)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 13:00:58 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.5ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4377)
+
+
+Started GET "/github/callback?code=fc1965a4762a47f168f0" for ::1 at 2021-06-06 13:01:17 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"fc1965a4762a47f168f0"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 7971ms (ActiveRecord: 0.0ms | Allocations: 1994)
+
+
+Started GET "/" for ::1 at 2021-06-06 13:01:25 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 402)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16626ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 10292)
+
+
+Started GET "/github/callback?error=access_denied&error_description=The+user+has+denied+your+application+access.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23access-denied" for 127.0.0.1 at 2021-06-06 13:02:58 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"error"=>"access_denied", "error_description"=>"The user has denied your application access.", "error_uri"=>"https://docs.github.com/apps/managing-oauth-apps/troubleshooting-authorization-request-errors/#access-denied"}
+Completed 500 Internal Server Error in 4260ms (ActiveRecord: 0.0ms | Allocations: 2576)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/login_controller.rb:22:in `github_callback'
+Started GET "/github/callback?error=access_denied&error_description=The+user+has+denied+your+application+access.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23access-denied" for 127.0.0.1 at 2021-06-06 13:04:16 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"error"=>"access_denied", "error_description"=>"The user has denied your application access.", "error_uri"=>"https://docs.github.com/apps/managing-oauth-apps/troubleshooting-authorization-request-errors/#access-denied"}
+Completed 500 Internal Server Error in 4558ms (ActiveRecord: 0.0ms | Allocations: 2594)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/login_controller.rb:22:in `github_callback'
+Started GET "/github/callback?error=access_denied&error_description=The+user+has+denied+your+application+access.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23access-denied" for 127.0.0.1 at 2021-06-06 13:07:24 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"error"=>"access_denied", "error_description"=>"The user has denied your application access.", "error_uri"=>"https://docs.github.com/apps/managing-oauth-apps/troubleshooting-authorization-request-errors/#access-denied"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 3947ms (ActiveRecord: 0.0ms | Allocations: 1979)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-06 13:07:28 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/authorize" for 127.0.0.1 at 2021-06-06 13:07:28 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 3476)
+
+
+Started GET "/github/callback?error=access_denied&error_description=The+user+has+denied+your+application+access.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23access-denied" for 127.0.0.1 at 2021-06-06 13:07:46 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"error"=>"access_denied", "error_description"=>"The user has denied your application access.", "error_uri"=>"https://docs.github.com/apps/managing-oauth-apps/troubleshooting-authorization-request-errors/#access-denied"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 11763ms (ActiveRecord: 0.0ms | Allocations: 1987)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-06 13:07:57 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/authorize" for 127.0.0.1 at 2021-06-06 13:07:57 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3317)
+
+
+Started GET "/github/callback?code=65bfe949309ca6139ac8" for 127.0.0.1 at 2021-06-06 13:08:22 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"65bfe949309ca6139ac8"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 5509ms (ActiveRecord: 0.0ms | Allocations: 1997)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-06 13:08:27 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10645ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 11458)
+
+
+Started GET "/" for ::1 at 2021-06-06 13:09:33 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8889ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 9451)
+
+
+Started GET "/" for ::1 at 2021-06-06 13:25:04 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 471)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12994ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 14698)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-06 13:25:38 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8236ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 12676)
+
+
+Started GET "/" for ::1 at 2021-06-06 13:26:15 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 161)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13537ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 13521)
+
+
+Started POST "/logout" for ::1 at 2021-06-06 13:43:11 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"UDW8wbvkdumlJt7Qi4ryHM0pdL9iR6Y604ayykBaQII2mDTGEOlPGGds47DNK6KzhML1HL+7Qm8uCgnZ2Dx9tQ==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 431)
+
+
+Started GET "/" for ::1 at 2021-06-06 13:43:11 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 13:43:11 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.4ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4366)
+
+
+Started GET "/github/callback?code=3bbf7695e7c6a93a4cb5" for ::1 at 2021-06-06 13:43:50 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"3bbf7695e7c6a93a4cb5"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 853ms (ActiveRecord: 0.0ms | Allocations: 1967)
+
+
+Started GET "/" for ::1 at 2021-06-06 13:43:51 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 463)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3849ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 14044)
+
+
+Started POST "/logout" for 127.0.0.1 at 2021-06-06 13:44:19 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"39vAzz43Lh3Itt/7U8wz76QQwLIc4V0VDjH+FeUZi2ffHTuff4+ftHFJOa/QJccJu+Qwz8weVV/dg91OZT48Tg==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 434)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-06 13:44:19 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 345)
+
+
+Started GET "/authorize" for 127.0.0.1 at 2021-06-06 13:44:19 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3482)
+
+
+Started GET "/github/callback?error=access_denied&error_description=The+user+has+denied+your+application+access.&error_uri=https%3A%2F%2Fdocs.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23access-denied" for 127.0.0.1 at 2021-06-06 13:44:37 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"error"=>"access_denied", "error_description"=>"The user has denied your application access.", "error_uri"=>"https://docs.github.com/apps/managing-oauth-apps/troubleshooting-authorization-request-errors/#access-denied"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 496ms (ActiveRecord: 0.0ms | Allocations: 1946)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-06 13:44:38 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/authorize" for 127.0.0.1 at 2021-06-06 13:44:38 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3319)
+
+
+Started POST "/logout" for ::1 at 2021-06-06 13:44:45 +0530
+Processing by LoginController#logout as JS
+  Parameters: {"authenticity_token"=>"ZF7gdcdyIvNrd/and6qn2QTqRikBmUj5rZuGV2wrhksC82hybH8bAqk9y8cxC/d2TQHHitxlrKxQFz1E9E27fA==", "commit"=>"Logout"}
+Redirected to http://localhost:3100/
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 385)
+
+
+Started GET "/" for ::1 at 2021-06-06 13:44:45 +0530
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3100/authorize
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 293)
+
+
+Started GET "/authorize" for ::1 at 2021-06-06 13:44:45 +0530
+Processing by LoginController#github_authorize as HTML
+  Rendering login/github_authorize.html.erb within layouts/application
+  Rendered login/github_authorize.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 3329)
+
+
+Started GET "/github/callback?code=e7143c2bf3e2cdfa7465" for ::1 at 2021-06-06 13:44:48 +0530
+Processing by LoginController#github_callback as HTML
+  Parameters: {"code"=>"e7143c2bf3e2cdfa7465"}
+Redirected to http://localhost:3100/
+Completed 302 Found in 941ms (ActiveRecord: 0.0ms | Allocations: 1963)
+
+
+Started GET "/" for ::1 at 2021-06-06 13:44:49 +0530
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 161)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3197ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 13409)
+
+
